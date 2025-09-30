@@ -1,7 +1,3 @@
-/* ========================= style.css ========================= */
-/* Component-level visuals, micro-interactions, and accessibility */
-
-
 /* Buttons */
 .btn-primary{transition:all .18s ease}
 .btn-primary:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(12,45,80,0.06)}
@@ -46,3 +42,4 @@ a:focus, button:focus, input:focus{outline:3px solid rgba(207,161,90,0.14);outli
 
 
 /* End of style.css */
+
