@@ -13,8 +13,8 @@
     :root {
       --bg-dark: #0b0b0c;
       --card-dark: #121214;
-      --gold: #d4af37;
-      --gold-soft: rgba(212, 175, 55, 0.25);
+      --vegas-gold: #C5B358; /* Vegas Gold */ :contentReference[oaicite:1]{index=1}
+      --vegas-gold-soft: rgba(197, 179, 88, 0.3);
       --text-light: #e6e6e6;
       --text-muted: #9a9a9a;
     }
@@ -34,7 +34,6 @@
       padding: 80px 8%;
     }
 
-    /* Container */
     .testimonial-container {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
@@ -55,71 +54,45 @@
       height: 110px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid var(--gold);
-      margin-bottom: 20px;
+      border: 3px solid var(--vegas-gold);
+      margin-bottom: 18px;
     }
-
-    .client-name {
-      color: var(--text-light);
-      font-size: 20px;
-      font-weight: 600;
-    }
-
-    .client-role {
-      color: var(--gold);
-      font-size: 14px;
-      margin: 6px 0;
-    }
-
-    .client-address {
-      color: var(--text-muted);
-      font-size: 13px;
-    }
+    .client-name { font-size: 20px; font-weight: 700; color: var(--text-light); }
+    .client-role { font-size: 14px; color: var(--vegas-gold); margin: 6px 0; }
+    .client-address { font-size: 13px; color: var(--text-muted); }
 
     .client-quote {
-      margin-top: 35px;
-      padding-left: 20px;
-      border-left: 2px solid var(--gold);
+      margin-top: 32px;
+      padding-left: 18px;
+      border-left: 3px solid var(--vegas-gold);
     }
-
-    .client-quote p {
-      color: var(--text-light);
-      font-size: 16px;
-      line-height: 1.6;
-    }
+    .client-quote p { font-size: 16px; line-height: 1.6; color: var(--text-light); }
 
     /* RIGHT */
     .testimonial-right {
-      padding-right: 30px;
+      text-align: center;
     }
 
-    .headline {
-      font-size: 44px;
+    .testimonial-quote {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--vegas-gold);
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+    .testimonial-quote span {
       color: var(--text-light);
-      margin-bottom: 20px;
-    }
-
-    .headline span {
-      color: var(--gold);
-    }
-
-    .commission {
-      font-size: 36px;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 40px;
-    }
-
-    .commission span {
-      font-size: 16px;
-      color: var(--text-muted);
-      margin-left: 10px;
+      display: block;
+      margin-top: 14px;
+      font-size: 18px;
+      font-weight: 400;
     }
 
     /* Proof Images */
     .proof-images {
       display: grid;
       gap: 25px;
+      margin-top: 30px;
     }
 
     .proof-card {
@@ -130,12 +103,11 @@
         0 20px 40px rgba(0,0,0,0.6);
       transition: all 0.4s ease;
     }
-
     .proof-card:hover {
-      transform: translateY(-6px) scale(1.01);
+      transform: translateY(-6px) scale(1.02);
       box-shadow:
-        0 0 25px var(--gold-soft),
-        0 30px 60px rgba(0,0,0,0.8);
+        0 0 28px var(--vegas-gold-soft),
+        0 30px 60px rgba(0,0,0,0.9);
     }
 
     /* Responsive */
@@ -143,10 +115,11 @@
       .testimonial-container {
         grid-template-columns: 1fr;
       }
-      .testimonial-right { padding-right: 0; margin-top: 40px; }
+      .testimonial-right { margin-top: 40px; }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Testimonial Section -->
@@ -171,12 +144,12 @@
 
       <!-- RIGHT SIDE -->
       <div class="testimonial-right">
-        <h2 class="headline">
-          Julia Closed <span>4 Deals</span>
-        </h2>
-        <div class="commission">
-          $45,000 <span>in Commission</span>
+        <div class="testimonial-quote">
+          “I got <strong>64 qualified leads</strong>, <strong>19 appointments</strong>,
+          and <strong>4 closed deals</strong>, and made <strong>$45,000</strong> in
+          commission. <span>I am impressed — I highly recommend it.”</span>
         </div>
+
         <div class="proof-images">
           <img src="crm.png" alt="CRM Proof" class="proof-card">
           <img src="inbox.png" alt="Inbox Proof" class="proof-card">
