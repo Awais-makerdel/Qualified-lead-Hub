@@ -1,40 +1,190 @@
-<section class="testimonial-luxury">
-  <div class="testimonial-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Testimonial Section</title>
 
-    <!-- LEFT SIDE -->
-    <div class="testimonial-left">
-      <img src="client.jpg" alt="Client Photo" class="client-photo">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-      <div class="client-info">
-        <h4 class="client-name">Julia Anderson</h4>
-        <p class="client-role">Licensed Realtor</p>
-        <p class="client-address">New York, USA</p>
+  <style>
+    /* Root Colors */
+    :root {
+      --bg-dark: #0b0b0c;
+      --card-dark: #121214;
+      --gold: #d4af37;
+      --gold-soft: rgba(212, 175, 55, 0.25);
+      --text-light: #e6e6e6;
+      --text-muted: #9a9a9a;
+    }
+
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    /* Section */
+    .testimonial-luxury {
+      background: radial-gradient(circle at top, #141414, var(--bg-dark));
+      padding: 80px 8%;
+    }
+
+    /* Container */
+    .testimonial-container {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    /* LEFT */
+    .testimonial-left {
+      background: var(--card-dark);
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.03);
+    }
+
+    .client-photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .client-name {
+      color: var(--text-light);
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .client-role {
+      color: var(--gold);
+      font-size: 14px;
+      margin: 6px 0;
+    }
+
+    .client-address {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .client-quote {
+      margin-top: 35px;
+      padding-left: 20px;
+      border-left: 2px solid var(--gold);
+    }
+
+    .client-quote p {
+      color: var(--text-light);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* RIGHT */
+    .testimonial-right {
+      padding-right: 30px;
+    }
+
+    .headline {
+      font-size: 44px;
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+
+    .headline span {
+      color: var(--gold);
+    }
+
+    .commission {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 40px;
+    }
+
+    .commission span {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-left: 10px;
+    }
+
+    /* Proof Images */
+    .proof-images {
+      display: grid;
+      gap: 25px;
+    }
+
+    .proof-card {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.04),
+        0 20px 40px rgba(0,0,0,0.6);
+      transition: all 0.4s ease;
+    }
+
+    .proof-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow:
+        0 0 25px var(--gold-soft),
+        0 30px 60px rgba(0,0,0,0.8);
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .testimonial-container {
+        grid-template-columns: 1fr;
+      }
+      .testimonial-right { padding-right: 0; margin-top: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-luxury">
+    <div class="testimonial-container">
+
+      <!-- LEFT SIDE -->
+      <div class="testimonial-left">
+        <img src="client.jpg" alt="Client Photo" class="client-photo">
+        <div class="client-info">
+          <h4 class="client-name">Julia Anderson</h4>
+          <p class="client-role">Licensed Realtor</p>
+          <p class="client-address">New York, USA</p>
+        </div>
+        <div class="client-quote">
+          <p>
+            For the price of your monthly coffee budget ($250), Julia closed 4 deals
+            and added <strong>$45,000</strong> to her GCI.
+          </p>
+        </div>
       </div>
 
-      <div class="client-quote">
-        <span></span>
-        <p>
-          For the price of your monthly coffee budget ($250), Julia closed 4 deals
-          and added <strong>$45,000</strong> to her GCI.
-        </p>
+      <!-- RIGHT SIDE -->
+      <div class="testimonial-right">
+        <h2 class="headline">
+          Julia Closed <span>4 Deals</span>
+        </h2>
+        <div class="commission">
+          $45,000 <span>in Commission</span>
+        </div>
+        <div class="proof-images">
+          <img src="crm.png" alt="CRM Proof" class="proof-card">
+          <img src="inbox.png" alt="Inbox Proof" class="proof-card">
+        </div>
       </div>
+
     </div>
+  </section>
 
-    <!-- RIGHT SIDE -->
-    <div class="testimonial-right">
-      <h2 class="headline">
-        Julia Closed <span>4 Deals</span>
-      </h2>
-
-      <div class="commission">
-        $45,000 <span>in Commission</span>
-      </div>
-
-      <div class="proof-images">
-        <img src="crm.png" alt="CRM Proof" class="proof-card">
-        <img src="inbox.png" alt="Inbox Proof" class="proof-card">
-      </div>
-    </div>
-
-  </div>
-</section>
+</body>
+</html>
